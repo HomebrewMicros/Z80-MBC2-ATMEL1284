@@ -10,7 +10,7 @@ can be found here (https://github.com/MCUdude/MightyCore.git)
 
 History
 
-20-Sep-2019 - Mark Riley
+20-Sep-2019 - SupremeSpod 
 	Branched "S220718-R280819_IOS-Z80-MBC2" to create "Z80-MBC2-ATMEL1284".
 	Created this "README".
 	Modified "Z80 BOOT" section of arduino file to use registers TCCR2B, TCCR2A, OCR2A and bits COM2A0, COM2A1.
