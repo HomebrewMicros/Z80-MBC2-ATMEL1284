@@ -3,14 +3,13 @@ This project contains a branched version of the Z80-MBC2 firmware.
 It is my intention to use the additional facilities of the ATMEL1284 microcontroller to add features to the original.
 
 Acknowledgement
-###############
 
 Original software and hardware documentation can be found here (https://github.com/SuperFabius/Z80-MBC2.git) 
-and I duly acknowledge the rights of the original author.  The original Arduino Bootloader - MightyDuino - 
-can be found here ()
+and I duly acknowledge the rights of the original author.  The original Arduino Bootloader - MightyCore - 
+can be found here (https://github.com/MCUdude/MightyCore.git)
 
 History
-#######
+
 20-Sep-2019 - Mark Riley
 	Branched "S220718-R280819_IOS-Z80-MBC2" to create "Z80-MBC2-ATMEL1284".
 	Created this "README".
