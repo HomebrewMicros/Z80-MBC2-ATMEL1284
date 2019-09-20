@@ -18,20 +18,20 @@
 #define _PFATFS	4004	/* Revision ID */
 
 #ifdef __cplusplus
-extern "C" {
+    extern "C" {
 #endif
 
 #include "integer.h"
 #include "pffconf.h"
 
 #if _PFATFS != _PFFCONF
-#error Wrong configuration file (pffconf.h).
+    #error Wrong configuration file (pffconf.h).
 #endif
 
 #if _FS_FAT32
-#define	CLUST	DWORD
+    #define	CLUST	DWORD
 #else
-#define	CLUST	WORD
+    #define	CLUST	WORD
 #endif
 
 
@@ -140,17 +140,16 @@ FRESULT pf_readdir (DIR* dj, FILINFO* fno);					/* Read a directory item from th
 /* Multi-byte word access macros  */
 
 #if _WORD_ACCESS == 1	/* Enable word access to the FAT structure */
-#define	LD_WORD(ptr)		(WORD)(*(WORD*)(BYTE*)(ptr))
-#define	LD_DWORD(ptr)		(DWORD)(*(DWORD*)(BYTE*)(ptr))
-#define	ST_WORD(ptr,val)	*(WORD*)(BYTE*)(ptr)=(WORD)(val)
-#define	ST_DWORD(ptr,val)	*(DWORD*)(BYTE*)(ptr)=(DWORD)(val)
+    #define	LD_WORD(ptr)		(WORD)(*(WORD*)(BYTE*)(ptr))
+    #define	LD_DWORD(ptr)		(DWORD)(*(DWORD*)(BYTE*)(ptr))
+    #define	ST_WORD(ptr,val)	*(WORD*)(BYTE*)(ptr)=(WORD)(val)
+    #define	ST_DWORD(ptr,val)	*(DWORD*)(BYTE*)(ptr)=(DWORD)(val)
 #else					/* Use byte-by-byte access to the FAT structure */
-#define	LD_WORD(ptr)		(WORD)(((WORD)*((BYTE*)(ptr)+1)<<8)|(WORD)*(BYTE*)(ptr))
-#define	LD_DWORD(ptr)		(DWORD)(((DWORD)*((BYTE*)(ptr)+3)<<24)|((DWORD)*((BYTE*)(ptr)+2)<<16)|((WORD)*((BYTE*)(ptr)+1)<<8)|*(BYTE*)(ptr))
-#define	ST_WORD(ptr,val)	*(BYTE*)(ptr)=(BYTE)(val); *((BYTE*)(ptr)+1)=(BYTE)((WORD)(val)>>8)
-#define	ST_DWORD(ptr,val)	*(BYTE*)(ptr)=(BYTE)(val); *((BYTE*)(ptr)+1)=(BYTE)((WORD)(val)>>8); *((BYTE*)(ptr)+2)=(BYTE)((DWORD)(val)>>16); *((BYTE*)(ptr)+3)=(BYTE)((DWORD)(val)>>24)
+    #define	LD_WORD(ptr)		(WORD)(((WORD)*((BYTE*)(ptr)+1)<<8)|(WORD)*(BYTE*)(ptr))
+    #define	LD_DWORD(ptr)		(DWORD)(((DWORD)*((BYTE*)(ptr)+3)<<24)|((DWORD)*((BYTE*)(ptr)+2)<<16)|((WORD)*((BYTE*)(ptr)+1)<<8)|*(BYTE*)(ptr))
+    #define	ST_WORD(ptr,val)	*(BYTE*)(ptr)=(BYTE)(val); *((BYTE*)(ptr)+1)=(BYTE)((WORD)(val)>>8)
+    #define	ST_DWORD(ptr,val)	*(BYTE*)(ptr)=(BYTE)(val); *((BYTE*)(ptr)+1)=(BYTE)((WORD)(val)>>8); *((BYTE*)(ptr)+2)=(BYTE)((DWORD)(val)>>16); *((BYTE*)(ptr)+3)=(BYTE)((DWORD)(val)>>24)
 #endif
-
 
 #ifdef __cplusplus
 }
