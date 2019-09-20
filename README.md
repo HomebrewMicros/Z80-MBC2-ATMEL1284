@@ -4,7 +4,9 @@ It is my intention to use the additional facilities of the ATMEL1284 microcontro
 
 Acknowledgement
 ###############
-Original software and hardware documentation can be found here (https://github.com/SuperFabius/Z80-MBC2.git) and I duly acknowledge the rights of the original author.  The original Arduino Bootloader - MightyDuino - can be found here ()
+Original software and hardware documentation can be found here (https://github.com/SuperFabius/Z80-MBC2.git) 
+and I duly acknowledge the rights of the original author.  The original Arduino Bootloader - MightyDuino - 
+can be found here ()
 
 History
 #######
