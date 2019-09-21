@@ -1212,7 +1212,7 @@ FRESULT pf_lseek( DWORD ofs )
 	if (ofs > 0) 
     {
 		bcs = (DWORD)fs->csize * 512;	/* Cluster size (byte) */
-		if (ifptr > 0 && ofs - 1) / bcs >= (ifptr - 1) / bcs) 
+		if ((ifptr > 0 && ofs - 1) / bcs >= (ifptr - 1) / bcs) 
         {   /* When seek to same or following cluster, */
 			fs->fptr = (ifptr - 1) & ~(bcs - 1);	/* start from the current cluster */
 			ofs -= fs->fptr;
@@ -1325,4 +1325,3 @@ FRESULT pf_readdir( DIR *dj, FILINFO *fno )
 }
 
 #endif /* _USE_DIR */
-
