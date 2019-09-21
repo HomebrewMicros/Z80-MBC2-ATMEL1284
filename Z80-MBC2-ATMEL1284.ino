@@ -73,40 +73,39 @@ Z80-MBC2-ATMEL1284 Forked from S220718-R280819 - new project.  Changed register 
 //
 // ------------------------------------------------------------------------------
 
-#define   D0            PA0 // pin 40   Z80 data bus
-#define   D1            PA1 // pin 39
-#define   D2            PA2 // pin 38
-#define   D3            PA3 // pin 37
-#define   D4            PA4 // pin 36
-#define   D5            PA5 // pin 35
-#define   D6            PA6 // pin 34
-#define   D7            PA7 // pin 33
+#define   D0            24    // PA0 pin 40   Z80 data bus
+#define   D1            25    // PA1 pin 39
+#define   D2            26    // PA2 pin 38
+#define   D3            27    // PA3 pin 37
+#define   D4            28    // PA4 pin 36
+#define   D5            29    // PA5 pin 35
+#define   D6            30    // PA6 pin 34
+#define   D7            31    // PA7 pin 33
 
-#define   LED_IOS       PB0 // pin 1    Led LED_IOS is ON if HIGH
-#define   WAIT_RES_     PB0 // pin 1    Reset the Wait FF
-#define   INT_          PB1 // pin 2    Z80 control bus
-#define   RAM_CE2       PB2 // pin 3    RAM Chip Enable (CE2). Active HIGH. Used only during boot
-#define   WAIT_         PB3 // pin 4    Z80 WAIT
-#define   SS_           PB4 // pin 5    SD SPI
-#define   MOSI          PB5 // pin 6    SD SPI
-#define   MISO          PB6 // pin 7    SD SPI
-#define   SCK           PB7 // pin 8    SD SPI
+#define   AD0           18    // PC2 pin 24   Z80 A0
+#define   WR_           19    // PC3 pin 25   Z80 WR
+#define   RD_           20    // PC4 pin 26   Z80 RD
+#define   MREQ_         21    // PC5 pin 27   Z80 MREQ
+#define   RESET_        22    // PC6 pin 28   Z80 RESET
+#define   MCU_RTS_      23    // PC7 pin 29   * RESERVED - NOT USED *
+#define   MCU_CTS_      10    // PD2 pin 16   * RESERVED - NOT USED *
+#define   BANK1         11    // PD3 pin 17   RAM Memory bank address (High)
+#define   BANK0         12    // PD4 pin 18   RAM Memory bank address (Low)
+#define   INT_           1    // PB1 pin 2    Z80 control bus
+#define   RAM_CE2        2    // PB2 pin 3    RAM Chip Enable (CE2). Active HIGH. Used only during boot
+#define   WAIT_          3    // PB3 pin 4    Z80 WAIT
+#define   SS_            4    // PB4 pin 5    SD SPI
+#define   MOSI           5    // PB5 pin 6    SD SPI
+#define   MISO           6    // PB6 pin 7    SD SPI
+#define   SCK            7    // PB7 pin 8    SD SPI
+#define   BUSREQ_       14    // PD6 pin 20   Z80 BUSRQ
+#define   CLK           15    // PD7 pin 21   Z80 CLK
+#define   SCL_PC0       16    // PC0 pin 22   IOEXP connector (I2C)
+#define   SDA_PC1       17    // PC1 pin 23   IOEXP connector (I2C)
+#define   LED_IOS        0    // PB0 pin 1    Led LED_IOS is ON if HIGH
+#define   WAIT_RES_      0    // PB0 pin 1    Reset the Wait FF
+#define   USER          13    // PD5 pin 19   Led USER and key (led USER is ON if LOW)
 
-#define   SCL_PC0       PC0 // pin 22   IOEXP connector (I2C)
-#define   SDA_PC1       PC1 // pin 23   IOEXP connector (I2C)
-#define   AD0           PC2 // pin 24   Z80 A0
-#define   WR_           PC3 // pin 25   Z80 WR
-#define   RD_           PC4 // pin 26   Z80 RD
-#define   MREQ_         PC5 // pin 27   Z80 MREQ
-#define   RESET_        PC6 // pin 28   Z80 RESET
-#define   MCU_RTS_      PC7 // pin 29   * RESERVED - NOT USED *
-
-#define   MCU_CTS_      PD2 // pin 16   * RESERVED - NOT USED *
-#define   BANK1         PD3 // pin 17   RAM Memory bank address (High)
-#define   BANK0         PD4 // pin 18   RAM Memory bank address (Low)
-#define   USER          PD5 // pin 19   Led USER and key (led USER is ON if LOW)
-#define   BUSREQ_       PD6 // pin 20   Z80 BUSRQ
-#define   CLK           PD7 // pin 21   Z80 CLK
 
 // ------------------------------------------------------------------------------
 //
