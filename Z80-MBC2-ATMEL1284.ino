@@ -72,7 +72,7 @@ Z80-MBC2-ATMEL1284 Forked from S220718-R280819 - new project.  Changed register 
 // Hardware definitions for A040618 (Z80-MBC2) - Base system
 //
 // ------------------------------------------------------------------------------
-
+//        MBC2 Name  Arduino      Location    Purpose
 #define   D0            24    // PA0 pin 40   Z80 data bus
 #define   D1            25    // PA1 pin 39
 #define   D2            26    // PA2 pin 38
