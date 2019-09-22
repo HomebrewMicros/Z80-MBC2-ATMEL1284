@@ -11,7 +11,7 @@
 // Use SPI SCK divisor of 2 if nonzero else 4.
 #define SPI_FCPU_DIV_2 1
 //------------------------------------------------------------------------------
-#define	FORWARD(d)	xmit(d)				/* Data forwarding function (console out) */
+#define FORWARD(d)  xmit(d)             /* Data forwarding function (console out) */
 static void xmit(char d) {}  // Dummy write console
 //------------------------------------------------------------------------------
 static void spi_set_divisor(BYTE cardType) 
@@ -56,9 +56,9 @@ inline BYTE rcv_spi (void) {xmit_spi(0XFF); return SPDR;}
         #error Bad SD_CS_PIN
     #endif  // SD_CS_PIN < 8
     #define SD_CS_MASK (1 << SD_CS_BIT)
-    #define SELECT()  (SD_CS_PORT &= ~SD_CS_MASK)	 /* CS = L */
-    #define	DESELECT()	(SD_CS_PORT |= SD_CS_MASK)	/* CS = H */
-    #define	SELECTING	!(SD_CS_PORT & SD_CS_MASK)	  /* CS status (true:CS low) */
+    #define SELECT()  (SD_CS_PORT &= ~SD_CS_MASK)    /* CS = L */
+    #define DESELECT()  (SD_CS_PORT |= SD_CS_MASK)  /* CS = H */
+    #define SELECTING   !(SD_CS_PORT & SD_CS_MASK)    /* CS status (true:CS low) */
 
     static void init_spi (void) 
     {
