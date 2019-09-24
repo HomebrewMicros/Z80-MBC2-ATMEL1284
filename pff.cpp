@@ -698,9 +698,9 @@ static FRESULT create_name( DIR *dj, const char **path )
 /*-----------------------------------------------------------------------*/
 /* Get file information from directory entry                             */
 /*          No return code                                               */
-/*  DIR *dj,            /* Pointer to the directory object               */
-/*  BYTE *dir,          /* 32-byte working buffer                        */
-/*  FILINFO *fno        /* Pointer to store the file information         */
+/*  DIR *dj,            Pointer to the directory object               */
+/*  BYTE *dir,          32-byte working buffer                        */
+/*  FILINFO *fno        Pointer to store the file information         */
 /*-----------------------------------------------------------------------*/
 #if _USE_DIR
 static void get_fileinfo( DIR *dj, BYTE *dir, FILINFO *fno )
